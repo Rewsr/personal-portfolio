@@ -2,6 +2,8 @@
 
 A privacy-conscious portfolio page documenting Rewsr's September 18, 2025 Startups Innovate Program milestone.
 
+This page is intended to be shared directly by link. It is not linked from the Rewsr homepage, and search crawlers are asked not to index it. The URL remains accessible to anyone who has it.
+
 This repository imports the [ManikMaity/Gmail-Clone](https://github.com/ManikMaity/Gmail-Clone) HTML, compiled Tailwind CSS, and Gmail logo. The import is recorded in commit `138ac21`. The source project did not include a license file at the time of import; attribution is retained here.
 
 The portfolio adaptation preserves the upstream navbar, sidebar, category tabs, and mail ribbon structure. It replaces example email content with two Rewsr entries and adds message opening and search in `portfolio.js`. Layout adjustments live in `portfolio.css`.
