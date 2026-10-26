@@ -3,76 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f8fafd" />
-    <meta name="description" content="Rewsr portfolio — Startups Innovate Program." />
-    <title>Rewsr — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:opsz,wght@17..18,400;17..18,500;17..18,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="Rewsr personal portfolio" />
+    <title>Rewsr — Personal Portfolio</title>
+    <!-- Requested dependency: the original Gmail-Clone project's published Tailwind build. -->
+    <link
+      rel="stylesheet"
+      href="https://manikmaity.github.io/Gmail-Clone/style.css"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="Rewsr portfolio home"><span class="brand-mark">R</span><span>rewsr</span></a>
-      <label class="search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search portfolio" aria-label="Search portfolio" /></label>
-      <a class="profile" href="https://github.com/Rewsr/personal-portfolio" aria-label="View source on GitHub">↗</a>
-    </header>
-
-    <div class="app-shell" id="top">
-      <aside class="sidebar" aria-label="Portfolio navigation">
-        <a class="compose" href="#recognition"><span>✦</span>Portfolio</a>
-        <nav>
-          <a class="active" href="#recognition"><span>▣</span>Highlights</a>
-          <a href="#about"><span>☆</span>About Rewsr</a>
-          <a href="#evidence"><span>◷</span>Evidence</a>
-        </nav>
-        <p class="label">Labels</p>
-        <a class="label-link" href="#recognition"><span class="dot"></span>Recognition</a>
-      </aside>
-
-      <main class="mail-panel">
-        <div class="utility" aria-label="Message controls">
-          <span>‹</span><span>›</span><span class="count">1 of 1</span><button type="button" aria-label="More actions">⋮</button>
-        </div>
-
-        <article class="message" id="recognition">
-          <div class="crumb"><span>Inbox</span><span>Recognition</span></div>
-          <h1>Welcome to the Startups Innovate Program</h1>
-          <div class="message-meta">
-            <div class="avatar" aria-hidden="true">S</div>
-            <div class="sender">
-              <strong>Startups Innovate Program</strong>
-              <span>program team · Google</span>
-              <small>to Rewsr</small>
-            </div>
-            <time datetime="2025-09-18T13:44">Sep 18, 2025 · 1:44 PM</time>
-            <button type="button" class="star" aria-label="Star message">☆</button>
+  <body class="h-screen flex flex-col md:pb-2 bg-[#f6f9ff] relative">
+    <nav class="w-full py-2 flex px-4 text-gray-600 justify-between">
+      <div class="flex items-center w-[70%] justify-between gap-3">
+        <div class="flex gap-1 items-center">
+          <button
+            class="h-10 w-10 grid place-content-center rounded-full hover:bg-gray-200"
+            aria-label="Menu"
+          >
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+          <div class="rewsr-wordmark">
+            <span>R</span>rewsr <small>portfolio</small>
           </div>
-
-          <div class="message-body">
-            <p>Hi,</p>
-            <p>We were welcomed to the <strong>Startups Innovate Program</strong>, an initiative designed for AI startups building what comes next.</p>
-            <div class="callout">
-              <span class="callout-icon" aria-hidden="true">✦</span>
-              <div><b>Google Cloud for Startups</b><br />Program participation includes a path to cloud credits, subject to approval.</div>
+        </div>
+        <label
+          class="hidden group md:flex h-full items-center rounded-full p-1 bg-[#e5f1ff] gap-2 w-[80%] max-w-2xl hover:drop-shadow-md hover:bg-white"
+          ><i class="fa-solid fa-magnifying-glass p-2"></i
+          ><input
+            class="h-full focus:outline-none bg-[#e5f1ff] py-2 w-full group-hover:bg-white"
+            type="search"
+            placeholder="Search portfolio" /><i
+            class="fa-solid fa-sliders p-2"
+          ></i
+        ></label>
+      </div>
+      <div class="flex items-center gap-2">
+        <a
+          class="grid place-content-center rounded-full hover:bg-gray-200 p-2"
+          href="https://github.com/Rewsr/personal-portfolio"
+          aria-label="GitHub source"
+          ><i class="fa-brands fa-github"></i></a
+        ><span class="account">R</span>
+      </div>
+    </nav>
+    <div class="h-full w-full grid grid-cols-10">
+      <aside
+        class="self-start sticky top-0 col-span-2 h-full mr-2 hidden md:block"
+      >
+        <a
+          class="flex gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md"
+          href="#message"
+          ><i class="fa-solid fa-briefcase text-xl"></i>
+          <p class="text-sm font-semibold">Portfolio</p></a
+        >
+        <ul class="w-full text-sm my-3">
+          <li>
+            <a
+              class="font-semibold w-full flex leading-none bg-blue-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+              href="#message"
+              ><i class="fa-solid fa-inbox"></i>
+              <p>Highlights</p></a
+            >
+          </li>
+          <li>
+            <a
+              class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+              href="#about"
+              ><i class="fa-regular fa-star"></i>
+              <p>About Rewsr</p></a
+            >
+          </li>
+          <li>
+            <a
+              class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+              href="#privacy"
+              ><i class="fa-solid fa-shield-halved"></i>
+              <p>Privacy</p></a
+            >
+          </li>
+        </ul>
+        <div class="flex justify-between py-3 pl-6">
+          <p class="text-lg font-semibold">Labels</p>
+        </div>
+        <p class="label-item"><i class="fa-solid fa-tag"></i> Recognition</p>
+      </aside>
+      <main
+        class="bg-white h-full col-span-10 md:col-span-8 rounded-2xl mx-2 flex flex-col overflow-y-auto"
+      >
+        <div
+          class="bg-white w-full sticky top-0 flex py-2 px-4 text-gray-600 text-[0.7rem] justify-between mail-tools"
+        >
+          <div class="flex gap-1">
+            <button><i class="fa-solid fa-arrow-left"></i></button
+            ><button><i class="fa-solid fa-archive"></i></button
+            ><button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          </div>
+          <div class="flex gap-4 items-center">
+            <p>1 of 1</p>
+            <button><i class="fa-solid fa-chevron-left"></i></button
+            ><button><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <article id="message" class="mail-reading">
+          <div class="subject-row">
+            <h1>Welcome to the Startups Innovate Program</h1>
+            <span>Inbox</span>
+          </div>
+          <div class="sender-row">
+            <div class="avatar">S</div>
+            <div>
+              <p>
+                <b>Startups Innovate Program</b>
+                <span>&lt;program team&gt;</span>
+              </p>
+              <small>to Rewsr <i class="fa-solid fa-caret-down"></i></small>
             </div>
-            <p>For Rewsr, this recognition is momentum: more room to test, measure, and ship infrastructure for demanding AI workloads.</p>
-            <p class="signature">— Rewsr<br /><span>September 18, 2025</span></p>
+            <time>Thu, Sep 18, 2025, 1:44 PM</time
+            ><button aria-label="Star">
+              <i class="fa-regular fa-star"></i>
+            </button>
+          </div>
+          <div class="mail-copy">
+            <p>Hi,</p>
+            <p>
+              We’re excited to share that Rewsr was welcomed to the
+              <b>Startups Innovate Program</b>, designed for AI startups.
+            </p>
+            <p class="notice">
+              <b><i class="fa-solid fa-cloud"></i> Google Cloud for Startups</b
+              ><br />Program participation includes a path to cloud credits,
+              subject to approval.
+            </p>
+            <p>
+              For Rewsr, this is a meaningful milestone: more capacity to test,
+              measure, and ship infrastructure for demanding AI workloads.
+            </p>
+            <p>— Rewsr</p>
           </div>
         </article>
-
-        <section class="project" id="about">
-          <div class="project-kicker">PORTFOLIO NOTE</div>
+        <section id="about" class="portfolio-copy">
+          <p class="eyebrow">PORTFOLIO NOTE</p>
           <h2>Infrastructure that lets AI teams move faster.</h2>
-          <p>Rewsr is building practical infrastructure for modern AI workloads. This page documents an early program milestone without publishing private correspondence or personal contact details.</p>
+          <p>
+            Rewsr builds practical infrastructure for modern AI workloads. This
+            entry records a program milestone without publishing private
+            correspondence or personal contact details.
+          </p>
         </section>
-
-        <section class="evidence" id="evidence">
-          <div><span class="check">✓</span><b>Privacy-first documentation</b><p>No screenshots, names, personal addresses, or confidential email content are displayed.</p></div>
-          <div><span class="check">✓</span><b>Accurate status</b><p>Credit eligibility is presented as subject to approval; this page does not claim a credit award.</p></div>
+        <section id="privacy" class="privacy-grid">
+          <div>
+            <i class="fa-solid fa-circle-check"></i
+            ><b> No screenshots or personal data</b>
+            <p>
+              No names, email addresses, or private correspondence are
+              displayed.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-check"></i
+            ><b> Accurate credit status</b>
+            <p>
+              The email describes credits as subject to approval, not as an
+              award.
+            </p>
+          </div>
         </section>
       </main>
     </div>
-    <footer>Interface inspired by familiar webmail patterns. Not affiliated with or endorsed by Google or Gmail.</footer>
+    <footer>
+      Built using the requested
+      <a href="https://github.com/ManikMaity/Gmail-Clone"
+        >ManikMaity/Gmail-Clone</a
+      >
+      project’s published CSS build. Webmail-style interface; not affiliated
+      with Google or Gmail.
+    </footer>
   </body>
 </html>

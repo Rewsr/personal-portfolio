@@ -2,7 +2,7 @@
 
 A privacy-conscious portfolio page documenting Rewsr's September 18, 2025 Startups Innovate Program milestone.
 
-The layout is an original, webmail-inspired implementation informed by the visual patterns of [ManikMaity/Gmail-Clone](https://github.com/ManikMaity/Gmail-Clone). It contains no copied source or assets.
+The page uses the published CSS build from [ManikMaity/Gmail-Clone](https://github.com/ManikMaity/Gmail-Clone), with an adapted portfolio-specific document structure and original content.
 
 ## Accuracy and privacy
 
