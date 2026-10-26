@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gmail Clone</title>
+    <title>Rewsr — Personal Portfolio</title>
+    <meta name="description" content="Rewsr portfolio, presented through the Gmail-Clone interface.">
 
     <!-- style.css link  -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./portfolio.css">
 
     <!-- font awsome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -19,11 +21,11 @@
 
 <body class="h-screen flex flex-col md:pb-2 bg-[#f6f9ff] relative">
 
-    <button
+    <a href="#inbox"
         class="flex md:hidden gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md absolute bottom-4 right-4"><i
             class="fa-solid fa-pencil text-xl"></i>
-        <p class="text-sm font-semibold">Compose</p>
-    </button>
+        <p class="text-sm font-semibold">Portfolio</p>
+    </a>
 
     <!-- ------------------------- navbar section starts here ---------------------------------- -->
     <nav class="w-full py-2 flex px-4 text-gray-600 justify-between">
@@ -34,16 +36,17 @@
                 <button class="h-10 w-10 grid place-content-center rounded-full hover:bg-gray-200"><i
                         class="fa-solid fa-bars text-lg"></i></button>
                 <div>
-                    <img class="h-9" src="./assets/gmail-logo.png" alt="">
+                    <img class="h-9" src="./assets-gmail-logo.png" alt="Gmail Clone">
                 </div>
+                <span class="portfolio-title">Rewsr portfolio</span>
             </div>
 
             <div
                 class=" hidden group md:flex h-full items-center rounded-full p-1 bg-[#e5f1ff] gap-2 w-[80%] max-w-2xl hover:drop-shadow-md hover:bg-white">
                 <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
-                <input class="h-full focus:outline-none bg-[#e5f1ff] py-2 w-full group-hover:bg-white" type="text"
-                    name="saerch" id="saerch" placeholder="Search mail">
+                <input class="h-full focus:outline-none bg-[#e5f1ff] py-2 w-full group-hover:bg-white" type="search"
+                    name="search" id="search" placeholder="Search portfolio" aria-label="Search portfolio">
                 <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
                         class="fa-solid fa-sliders"></i></button>
             </div>
@@ -58,8 +61,7 @@
                     class="fa-solid fa-gear"></i></button>
             <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
                     class="fa-solid fa-list-ul"></i></button>
-            <button class="grid place-content-center rounded-full hover:bg-gray-200 w-7 overflow-hidden"><img
-                    src="./assets/my-pic.jpg" alt="manikmaity"></button>
+            <a class="profile-link" href="https://github.com/Rewsr/personal-portfolio" aria-label="Portfolio source on GitHub">R</a>
         </div>
         <!-- navbar right content ends here -->
     </nav>
@@ -73,41 +75,31 @@
 
         <!-- ------------------------- gmail left sidebar starts here --------------------- -->
         <div class="self-start sticky top-0 col-span-2 h-full mr-2 hidden md:block">
-            <button class="flex gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md"><i
+            <a href="#inbox" class="flex gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md"><i
                     class="fa-solid fa-pencil text-xl"></i>
-                <p class="text-sm font-semibold">Compose</p>
-            </button>
+                <p class="text-sm font-semibold">Portfolio</p>
+            </a>
 
             <ul class="w-full text-sm my-3">
                 <li class="w-full"><a
                         class=" font-semibold w-full flex leading-none bg-blue-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-solid fa-inbox"></i>
-                        <p class="flex w-full justify-between">Inbox <span>4,256</span></p>
+                        href="#inbox"><i class="fa-solid fa-inbox"></i>
+                        <p class="flex w-full justify-between">Inbox <span>2</span></p>
                     </a></li>
                 <li class="w-full"><a
                         class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-regular fa-star"></i>
-                        <p class="flex w-full justify-between">Starred</p>
+                        href="#program"><i class="fa-regular fa-star"></i>
+                        <p class="flex w-full justify-between">Recognition</p>
                     </a></li>
                 <li class="w-full"><a
                         class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-regular fa-clock"></i>
-                        <p class="flex w-full justify-between">Snoozed</p>
+                        href="#about"><i class="fa-regular fa-clock"></i>
+                        <p class="flex w-full justify-between">About Rewsr</p>
                     </a></li>
                 <li class="w-full"><a
                         class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-regular fa-paper-plane"></i>
-                        <p class="flex w-full justify-between">Sent</p>
-                    </a></li>
-                <li class="w-full"><a
-                        class=" font-semibold w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-regular fa-file"></i>
-                        <p class="flex w-full justify-between">Draft <span class="opacity-60">42</span></p>
-                    </a></li>
-                <li class="w-full"><a
-                        class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
-                        href="#"><i class="fa-solid fa-angle-down"></i>
-                        <p class="flex w-full justify-between">More</p>
+                        href="https://github.com/Rewsr/personal-portfolio"><i class="fa-regular fa-paper-plane"></i>
+                        <p class="flex w-full justify-between">Source</p>
                     </a></li>
             </ul>
             <div class="flex justify-between py-3 pl-6">
@@ -121,7 +113,7 @@
 
 
         <!-- ------------------------- gmail right main contents start here -------------------------  -->
-        <div class="bg-white h-full col-span-10 md:col-span-8 rounded-2xl mx-2 flex flex-col">
+        <div class="bg-white h-full col-span-10 md:col-span-8 rounded-2xl mx-2 flex flex-col" id="inbox">
 
             <!-- --------------------------sticky section start--------------------  -->
             <div class="bg-white w-full sticky top-0 flex py-2 px-4 text-gray-600 text-[0.7rem] justify-between">
@@ -143,7 +135,7 @@
                 <!-- left  -->
                 <div class="flex gap-1">
                     <div class="flex items-center h-full rounded-md px-2 cursor-pointer hover:bg-gray-200">
-                        <p>1-50 of 4,814</p>
+                        <p>1–2 of 2</p>
                     </div>
                     <button class="grid place-content-center rounded-full hover:bg-gray-200 p-3"><i
                             class="fa-solid fa-chevron-left"></i></button>
@@ -158,29 +150,28 @@
 
 
             <!-- ------------------------ Scrolable main section starts here ------------------------  -->
-            <div class="scrolable-width overflow-y-scroll overflow-x-hidden">
+            <div class="scrolable-width overflow-y-scroll overflow-x-hidden" id="mail-scroll">
 
                 <!-- ----------------- Mail Catergory select Section start--------------------  -->
                 <div
                     class="hidden md:flex h-12 text-sm font-medium leading-none text-gray-600 border-b border-gray-200">
-                    <button
-                        class="flex h-full w-52 items-center px-4 gap-4 text-blue-600 border-b-[3px] border-blue-600">
+                    <button type="button" data-category="all"
+                        class="flex h-full w-52 items-center px-4 gap-4 category-active">
                         <i class="fa-solid fa-inbox"></i>
                         <p>Primary</p>
                     </button>
 
-                    <button class="flex h-full w-52 items-center px-4 gap-4 hover:bg-gray-200">
+                    <button type="button" data-category="program" class="flex h-full w-52 items-center px-4 gap-4 hover:bg-gray-200">
                         <i class="fa-solid fa-receipt"></i>
-                        <p>Promotions</p>
+                        <p>Recognition</p>
                     </button>
 
-                    <button
+                    <button type="button" data-category="about"
                         class="flex h-full w-52 items-center px-4 gap-4 hover:bg-gray-200 overflow-hidden text-ellipsis whitespace-nowrap">
                         <i class="fa-solid fa-receipt"></i>
                         <div class="flex flex-col text-start">
-                            <p>Social <span class="text-xs px-1 leading-none bg-blue-600 text-white rounded-full">5
-                                    new</span></p>
-                            <p class="text-xs font-normal text-gray-400">Facebook, LinkedI, Twit..</p>
+                            <p>About</p>
+                            <p class="text-xs font-normal text-gray-400">Rewsr portfolio</p>
                         </div>
                     </button>
 
@@ -188,1213 +179,43 @@
                 <!-- ----------------- Mail Catergory select Section end --------------------  -->
 
                 <!-- ------------------------ all mails sections starts here----------------------  -->
-                <div class="flex flex-col h-full">
-
-                    <!-- ------------------- mail  ribbon starts here ------------ -->
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
+                <div class="flex flex-col h-full" id="inbox-list">
+                    <!-- The two portfolio rows use the upstream mail-ribbon layout and utility classes. -->
+                    <button type="button" class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6 portfolio-row" data-open="program" id="program">
                         <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">PW Skills</p>
-
+                            <span class="md:grid place-content-center h-full w-8 rounded-full hidden"><i class="fa-regular fa-square"></i></span>
+                            <span class="md:grid place-content-center rounded-full p-2 hidden"><i class="fa-regular fa-star"></i></span>
+                            <span class="text-black ml-1 row-sender">Startups Innovate Program</span>
                         </div>
-
-                        <!-- mail middle sections  -->
                         <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Join Our Live Class on Java Script Fundamentals📊
-                                </p>
-                                <p class="text-black">- Dear Students,
-
-                                    I hope this message finds you well. We're thrilled to invite you to our upcoming
-                                    live class on Javascript fundamentals.💫</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
+                            <span class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap row-preview"><strong class="text-black font-semibold">Welcome to the Startups Innovate Program</strong><span class="text-black">&nbsp;— Rewsr's participation confirmed for the 2025 AI startup cohort</span></span>
                         </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>07:00</p>
-                        </div>
-
-                    </div>
-                    <!-- ------------------- mail  ribbon ends here ------------ -->
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px] row-date"><time datetime="2025-09-18">Sep 18, 2025</time></div>
+                    </button>
+                    <button type="button" class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6 portfolio-row" data-open="about" id="about">
                         <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Cuvette</p>
-
+                            <span class="md:grid place-content-center h-full w-8 rounded-full hidden"><i class="fa-regular fa-square"></i></span>
+                            <span class="md:grid place-content-center rounded-full p-2 hidden"><i class="fa-regular fa-star"></i></span>
+                            <span class="text-black ml-1 row-sender">Rewsr</span>
                         </div>
-
-                        <!-- mail middle sections  -->
                         <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Job Guarantee course Program</p>
-                                <p class="text-black">- Hey Manik,
-
-                                    After placing 3000+ students at our partner companies, we have analyzed all the
-                                    things required to get a high-paying Job & compiled them under our placement
-                                    guarantee course program.</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
+                            <span class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap row-preview"><strong class="text-black font-semibold">About Rewsr</strong><span class="text-black">&nbsp;— Building infrastructure for demanding AI workloads</span></span>
                         </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>05:12</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Geeks</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">This Is Exactly What You're Looking For!</p>
-                                <p class="text-black">- Hello Authors,
-
-
-                                    We understand that it can be challenging when your articles are stuck in the review
-                                    process. But, hey, our GeeksforGeeks Community has your back!</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>03:31</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>5Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1 overflow-hidden text-ellipsis whitespace-nowrap">Cuvette</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Farid Ahmed from our course program got placed
-                                    successfully</p>
-                                <p class="text-black">- Hey Manik,
-
-                                    Farid Ahmed from our course has been successfully placed after completing our course
-                                    program. Listen to what </p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>5Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Internshala</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Manik, new internships in Re.Act Waste Tech Pvt.
-                                    Ltd, Intesome & more </p>
-                                <p class="text-black">- Hi Manik,
-                                    Here are some of the latest opportunities matching your preferences. Apply now!</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>5Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Medium</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Stop Telling People Everything | Oyinade</p>
-                                <p class="text-black">- Medium daily digest
-                                    TODAY'S HIGHLIGHTS</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>5Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>6Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>6Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Redit</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">"tell me your favourite song and ill guess yo..."
-                                </p>
-                                <p class="text-black">- r/teenagers · Posted by u/lameyisfamey 13h ago
-                                    tell me your favourite song and ill guess your favourite colour</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>6Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">Talal just messaged you</p>
-                                <p class="text-black">- 1 new message awaits your response</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>7Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">Quora</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">I am 5'9" tall and a male, but when I walk next to a
-                                    girl taller than me, I feel very...?</p>
-                                <p class="text-black">- I am 5'9" tall and a male, but when I walk next to a girl taller
-                                    than me, I feel very...?</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>7Nov</p>
-                        </div>
-
-                    </div>
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>7Nov</p>
-                        </div>
-
-                    </div>
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
-                        <!-- mail right section  -->
-                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
-                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
-                                <input type="checkbox" name="" id="">
-                            </div>
-                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
-                                    class="fa-regular fa-star"></i></button>
-                            <p class="text-black ml-1">LinkedIn</p>
-
-                        </div>
-
-                        <!-- mail middle sections  -->
-                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
-                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
-                                <p class="text-black font-semibold">See Monindra's and other people's connections,
-                                    experience, and more</p>
-                                <p class="text-black">- See Monindra's and other people's connections, experience, and
-                                    more</p>
-                            </div>
-                            <p class="w-[2%]">...</p>
-                        </div>
-
-                        <!-- mail right section  -->
-                        <div
-                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
-                            <p>8Nov</p>
-                        </div>
-
-                    </div>
-
-
-
+                        <div class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px] row-date"><span>Portfolio</span></div>
+                    </button>
                 </div>
+                <article class="portfolio-detail" id="program-detail" hidden>
+                    <button type="button" class="detail-back" aria-label="Back to inbox"><i class="fa-solid fa-arrow-left"></i></button>
+                    <h1>Welcome to the Startups Innovate Program <span class="inbox-chip">Inbox</span></h1>
+                    <div class="detail-header"><span class="detail-avatar">G</span><div><strong>Startups Innovate Program</strong> <small>&lt;<span class="redacted">••••</span>@google.com&gt;</small><br><small>to Rewsr</small></div><time datetime="2025-09-18T13:44">Thu, Sep 18, 2025, 1:44 PM</time></div>
+                    <div class="detail-body"><p>Rewsr's participation in the Startups Innovate Program was confirmed on September 18, 2025. The program was designed for AI startups and ran from October 6 to October 31, 2025.</p><p><strong>Google Cloud for Startups credits</strong> were included among the next steps in the welcome email. The email encouraged eligible participants to apply; approval was required.</p><p class="detail-note">Portfolio summary of the welcome email. Names and the email local part have been redacted.</p></div>
+                </article>
+                <article class="portfolio-detail" id="about-detail" hidden>
+                    <button type="button" class="detail-back" aria-label="Back to inbox"><i class="fa-solid fa-arrow-left"></i></button>
+                    <h1>About Rewsr <span class="inbox-chip">Portfolio</span></h1>
+                    <div class="detail-header"><span class="detail-avatar">R</span><div><strong>Rewsr</strong><br><small>Portfolio note</small></div></div>
+                    <div class="detail-body"><p>Rewsr builds infrastructure for demanding AI workloads.</p><p><a href="https://rewsr.com/">Visit rewsr.com</a> · <a href="https://github.com/Rewsr/personal-portfolio">View this portfolio's source</a></p></div>
+                </article>
                 <!-- ------------------------ all mails sections starts here----------------------  -->
 
             </div>
@@ -1410,6 +231,7 @@
     </div>
     <!------------------------------- gmail main section ends here ------------------------------  -->
 
+    <script src="./portfolio.js" defer></script>
 </body>
 
 </html>
