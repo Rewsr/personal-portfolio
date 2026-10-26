@@ -21,10 +21,16 @@ function filterRows() {
 }
 
 document.querySelectorAll("[data-open]").forEach((row) => {
-  row.addEventListener("click", () => showMessage(row.dataset.open));
+  row.addEventListener("click", () => {
+    location.hash = row.dataset.open;
+    showMessage(row.dataset.open);
+  });
 });
 document.querySelectorAll(".detail-back").forEach((button) => {
-  button.addEventListener("click", () => showMessage(""));
+  button.addEventListener("click", () => {
+    location.hash = "inbox";
+    showMessage("");
+  });
 });
 document.querySelectorAll('a[href="#inbox"]').forEach((link) => {
   link.addEventListener("click", () => showMessage(""));
@@ -46,3 +52,10 @@ document.querySelectorAll("[data-category]").forEach((button) => {
     });
   });
 });
+
+function showHashRoute() {
+  const route = location.hash.slice(1);
+  showMessage(route === "program" || route === "about" ? route : "");
+}
+window.addEventListener("hashchange", showHashRoute);
+showHashRoute();
